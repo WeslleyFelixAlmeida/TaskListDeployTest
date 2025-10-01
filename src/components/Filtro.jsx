@@ -122,33 +122,33 @@ export default function Filtro({
 
     //Criando um array de objetos que contém as tarefas com as dataFimFormatada sendo atribuida em um objeto Date()
     tarefas.forEach((tarefa) => {
-      let [dia, mes, ano] = tarefa.dataFimTarefaFormatada.split("/");
+      let [dia, mes, ano] = tarefa.datafimtarefaformatada.split("/");
 
       let dataFormatada = new Date(`${ano}-${mes}-${dia}`);
 
       arrayNovo.push({
         ...tarefa,
-        dataFimTarefaFormatada: dataFormatada,
+        datafimtarefaformatada: dataFormatada,
       });
     });
 
     if (ordenamento === "crescente") {
       arrayNovo.sort(
         (a, b) =>
-          new Date(a.dataFimTarefaFormatada) -
-          new Date(b.dataFimTarefaFormatada)
+          new Date(a.datafimtarefaformatada) -
+          new Date(b.datafimtarefaformatada)
       );
     } else if (ordenamento === "decrescente") {
       arrayNovo.sort(
         (a, b) =>
-          new Date(b.dataFimTarefaFormatada) -
-          new Date(a.dataFimTarefaFormatada)
+          new Date(b.datafimtarefaformatada) -
+          new Date(a.datafimtarefaformatada)
       );
     }
 
     //Formatando novamente as datas para o formato dd/mm/yyyy
     arrayNovo.forEach((tarefa, index) => {
-      let data = new Date(tarefa.dataFimTarefaFormatada);
+      let data = new Date(tarefa.datafimtarefaformatada);
       const dia = data.getDate().toString().padStart(2, "0");
       const mes = (data.getMonth() + 1).toString().padStart(2, "0");
       const ano = data.getFullYear();
@@ -157,7 +157,7 @@ export default function Filtro({
 
       arrayNovo[index] = {
         ...tarefa,
-        dataFimTarefaFormatada: dataFimFormatada,
+        datafimtarefaformatada: dataFimFormatada,
       };
     });
 
@@ -174,7 +174,7 @@ export default function Filtro({
       let dataFormatada = `${dia}/${mes}/${ano}`;
 
       let tarefasPorData = tarefas.filter(
-        (tarefa) => tarefa.dataFimTarefaFormatada === dataFormatada
+        (tarefa) => tarefa.datafimtarefaformatada === dataFormatada
       );
       return tarefasPorData;
     }
@@ -183,7 +183,7 @@ export default function Filtro({
   const filtrarTarefasStatus = (tarefas, statusEscolhidos) => {
     //statusEscolhidos espera um array
     let retornoTarefasFiltroStatus = tarefas.filter((tarefa) =>
-      statusEscolhidos.includes(tarefa.statusID)
+      statusEscolhidos.includes(tarefa.statusid)
     );
 
     return retornoTarefasFiltroStatus;

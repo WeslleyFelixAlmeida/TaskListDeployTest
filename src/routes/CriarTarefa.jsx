@@ -6,6 +6,7 @@ import InputWithText from "../components/InputWithText";
 import Labels from "../components/Labels";
 import Mensagem from "../components/Mensagem";
 import Islogged from "../components/Islogged";
+import { API_URL } from "../utils/api_connection_variable";
 
 export default function CriarTarefa() {
   const [mensagem, setMensagem] = useState({
@@ -76,7 +77,7 @@ export default function CriarTarefa() {
   const criarTarefa = (e) => {
     e.preventDefault();
 
-    fetch("http://localhost:5050/Tarefas/CriarTarefa", {
+    fetch(`${API_URL}/Tarefas/CriarTarefa`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

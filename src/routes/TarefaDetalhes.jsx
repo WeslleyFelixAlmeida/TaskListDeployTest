@@ -8,6 +8,7 @@ import Islogged from "../components/Islogged";
 import FormUpdate from "../components/FormUpdate";
 import Mensagem from "../components/Mensagem";
 import QuestionBox from "../components/QuestionBox";
+import { API_URL } from "../utils/api_connection_variable";
 
 export default function TaskDetails() {
   const { id } = useParams();
@@ -131,7 +132,7 @@ export default function TaskDetails() {
   });
 
   useEffect(() => {
-    fetch(`http://localhost:5050/Tarefas/PuxarDadosTarefaEspecifica/${id}`, {
+    fetch(`${API_URL}/Tarefas/PuxarDadosTarefaEspecifica/${id}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -145,15 +146,15 @@ export default function TaskDetails() {
         }
 
         setDadosTarefa({
-          dataFimTarefaFormatada: data.dataFimTarefaFormatada,
-          dataInicioTarefaFormatada: data.dataInicioTarefaFormatada,
+          dataFimTarefaFormatada: data.datafimtarefaformatada,
+          dataInicioTarefaFormatada: data.datainiciotarefaformatada,
           descricao: data.descricao,
           id: data.id,
-          statusID: data.statusID,
+          statusID: data.statusid,
           titulo: data.titulo,
         });
 
-        verificarEstado(data.statusID);
+        verificarEstado(data.statusid);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -173,7 +174,7 @@ export default function TaskDetails() {
   };
 
   const [funcaoExecutar, setFuncaoExecutar] = useState(() => () => {
-    fetch(`http://localhost:5050/Tarefas/Deletar/${id}`, {
+    fetch(`${API_URL}/Tarefas/Deletar/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -225,7 +226,7 @@ export default function TaskDetails() {
         break;
     }
 
-    fetch(`http://localhost:5050/Tarefas/Status/${id}`, {
+    fetch(`${API_URL}/Tarefas/Status/${id}`, {
       method: "PATCH",
       body: JSON.stringify({ status: novoStatus }),
       headers: {
@@ -240,11 +241,11 @@ export default function TaskDetails() {
         }
         removerJanelaAlteracaoStatus();
         mostrarMensagem("Status alterado com sucesso!", "success");
-        verificarEstado(data.statusID);
+        verificarEstado(data.statusid);
 
         setDadosTarefa({
           ...dadosTarefa,
-          statusID: data.statusID,
+          statusID: data.statusid,
         });
 
       })

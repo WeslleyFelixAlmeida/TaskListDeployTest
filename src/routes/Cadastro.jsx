@@ -5,12 +5,13 @@ import styles from "./Cadastro.module.css";
 import InputWithText from "../components/InputWithText";
 import Labels from "../components/Labels";
 import Mensagem from "../components/Mensagem";
+import { API_URL } from "../utils/api_connection_variable";
 
 export default function Cadastro() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:5050/User/Islogged", {
+    fetch(`${API_URL}/User/Islogged`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -86,7 +87,7 @@ export default function Cadastro() {
       return;
     }
 
-    fetch("http://localhost:5050/User/Cadastro", {
+    fetch(`${API_URL}/User/Cadastro`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

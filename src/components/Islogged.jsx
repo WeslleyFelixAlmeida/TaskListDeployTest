@@ -2,11 +2,12 @@
 
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import { API_URL } from "../utils/api_connection_variable";
 
 export default function Islogged() {
   const navigate = useNavigate();
   useEffect(() => {
-    fetch("http://localhost:5050/User/Islogged", {
+    fetch(`${API_URL}/User/Islogged`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

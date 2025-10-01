@@ -4,6 +4,7 @@ import styles from "./FormUpdatePerfil.module.css";
 import Labels from "./Labels";
 import InputWithText from "./InputWithText";
 import QuestionBox from "./QuestionBox";
+import { API_URL } from "../utils/api_connection_variable";
 
 export default function FormUpdatePerfil({
   setJanelaUpdate,
@@ -77,7 +78,7 @@ export default function FormUpdatePerfil({
 
   const atualizarDado = () => {
     if (formUsuarioUpdate.usuarioUpdate) {
-      fetch(`http://localhost:5050/User/AlterarUsuario`, {
+      fetch(`${API_URL}/User/AlterarUsuario`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -109,7 +110,7 @@ export default function FormUpdatePerfil({
           );
         });
     } else if (formSenha.senhaAntigaUpdate && formSenha.senhaUpdate) {
-      fetch(`http://localhost:5050/User/AlterarSenhaUsuario`, {
+      fetch(`${API_URL}/User/AlterarSenhaUsuario`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

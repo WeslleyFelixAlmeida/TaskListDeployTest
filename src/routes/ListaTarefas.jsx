@@ -11,6 +11,7 @@ import Labels from "../components/Labels";
 import Islogged from "../components/Islogged";
 import Mensagem from "../components/Mensagem";
 import Filtro from "../components/Filtro";
+import { API_URL } from "../utils/api_connection_variable";
 
 export default function ListaTarefa() {
   const [tarefas, setTarefas] = useState([]);
@@ -121,7 +122,7 @@ export default function ListaTarefa() {
   }, [searchParams]);
 
   useEffect(() => {
-    fetch("http://localhost:5050/Tarefas/PuxarDadosTarefas", {
+    fetch(`${API_URL}/Tarefas/PuxarDadosTarefas`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -275,10 +276,10 @@ export default function ListaTarefa() {
           <li key={tarefa.id}>
             <Tarefa
               titulo={tarefa.titulo}
-              dataFim={tarefa.dataFimTarefaFormatada}
-              dataInicio={tarefa.dataInicioTarefaFormatada}
-              descTarefa={tarefa.descTarefa}
-              status={tarefa.statusID}
+              dataFim={tarefa.datafimtarefaformatada}
+              dataInicio={tarefa.datainiciotarefaformatada}
+              descTarefa={tarefa.desctarefa}
+              status={tarefa.statusid}
               linkTarefa={`./../TarefaDetalhes/${tarefa.id}`}
             />
           </li>

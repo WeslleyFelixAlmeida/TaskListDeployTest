@@ -6,6 +6,7 @@ import InputWithText from "./InputWithText";
 import Labels from "./Labels";
 import QuestionBox from "./QuestionBox";
 import Mensagem from "./Mensagem";
+import { API_URL } from "../utils/api_connection_variable";
 
 export default function FormUpdate({
   display,
@@ -27,7 +28,7 @@ export default function FormUpdate({
   const [funcaoExecutar, setFuncaoExecutar] = useState(() => () => {});
 
   const alterarTitulo = () => {
-    fetch(`http://localhost:5050/Tarefas/Titulo/${id}`, {
+    fetch(`${API_URL}/Tarefas/Titulo/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -53,7 +54,7 @@ export default function FormUpdate({
   };
 
   const alterarDataFim = () => {
-    fetch(`http://localhost:5050/Tarefas/DataFim/${id}`, {
+    fetch(`${API_URL}/Tarefas/DataFim/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -80,7 +81,7 @@ export default function FormUpdate({
   };
 
   const alterarDesc = () => {    
-    fetch(`http://localhost:5050/Tarefas/Descricao/${id}`, {
+    fetch(`${API_URL}/Tarefas/Descricao/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

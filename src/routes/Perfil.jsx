@@ -6,6 +6,7 @@ import Islogged from "../components/Islogged";
 import FormUpdatePerfil from "../components/FormUpdatePerfil";
 import Mensagem from "../components/Mensagem";
 import QuestionBox from "../components/QuestionBox";
+import { API_URL } from "../utils/api_connection_variable";
 
 export default function Perfil() {
   const navigate = useNavigate();
@@ -31,7 +32,7 @@ export default function Perfil() {
   });
 
   useEffect(() => {
-    fetch("http://localhost:5050/User/Perfil", {
+    fetch(`${API_URL}/User/Perfil`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -44,6 +45,7 @@ export default function Perfil() {
           setInfoUsuario({
             nomeUsuario: data.usuarioDados,
           });
+          console.log(data)
         }
       })
       .catch((err) => console.log(err));
@@ -111,7 +113,7 @@ export default function Perfil() {
   };
 
   const deletarConta = () => {
-    fetch(`http://localhost:5050/User/DeletarConta`, {
+    fetch(`${API_URL}/User/DeletarConta`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

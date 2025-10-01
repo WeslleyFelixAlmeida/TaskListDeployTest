@@ -5,6 +5,7 @@ import styles from "../routes/Login.module.css";
 import InputWithText from "../components/InputWithText";
 import Labels from "../components/Labels";
 import Mensagem from "../components/Mensagem";
+import { API_URL } from "../utils/api_connection_variable";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -55,7 +56,7 @@ export default function Login() {
   };
 
   useEffect(() => {
-    fetch("http://localhost:5050/User/Islogged", {
+    fetch(`${API_URL}/User/Islogged`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -86,7 +87,7 @@ export default function Login() {
   const eventoSubmitForm = (e) => {
     e.preventDefault();
 
-    fetch("http://localhost:5050/User/Login", {
+    fetch(`${API_URL}/User/Login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

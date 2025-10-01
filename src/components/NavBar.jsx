@@ -3,13 +3,14 @@ import styles from "./Navbar.module.css";
 import logo from "../assets/imgs/Icones/icone_principal.png";
 import icone_perfil from "../assets/imgs/Icones/icone_perfil.png";
 import { useEffect, useState } from "react";
+import { API_URL } from "../utils/api_connection_variable";
 
 export default function NavBar() {
   const location = useLocation();
   const params = useParams();
   const navigate = useNavigate();
   const logout = () => {
-    fetch("http://localhost:5050/User/Logout", {
+    fetch(`${API_URL}/User/Logout`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
