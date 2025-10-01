@@ -1,5 +1,5 @@
 import { Link, useLocation, useParams, useNavigate } from "react-router-dom";
-import styles from "./Navbar.module.css";
+import styles from "./NavBar.module.css";
 import logo from "../assets/imgs/Icones/icone_principal.png";
 import icone_perfil from "../assets/imgs/Icones/icone_perfil.png";
 import { useEffect, useState } from "react";
