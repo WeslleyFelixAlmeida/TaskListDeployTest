@@ -1,0 +1,192 @@
+:root {
+  --color: #0455bf;
+  --border_color: #034aa6;
+}
+
+.containerFiltroExplicacao {
+  display: none;
+  position: absolute;
+  height: 100vh;
+  background-color: white;
+  z-index: 4;
+  width: 100%;
+  left: 0;
+  color: var(--color);
+}
+
+#botaoExplicacaoVoltar {
+  margin-left: 10px;
+}
+
+#containerStatusLinha {
+  padding: 10px;
+}
+
+.statusLinha {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  text-align: justify;
+}
+
+.statusLinhaInterna {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  align-items: center;
+}
+
+#mainContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+#topMain {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#topMain > h1 {
+  color: #0455bf;
+  text-shadow: 1px 0px 1px #034aa6;
+  font-size: 50px;
+}
+
+#containerBotoesLista {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.BotoesLista {
+  width: 300px;
+  padding: 5px;
+  background-color: var(--color);
+  align-self: flex-start;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border: solid 1px var(--border_color);
+  border-radius: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+  font-size: inherit;
+}
+
+.BotoesLista:hover {
+  background-color: var(--border_color);
+  color: white;
+}
+
+#listaStatus {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.linhasStatus {
+  width: fit-content;
+  display: flex;
+  flex-direction: row-reverse;
+  column-gap: 10px;
+  color: #0455bf;
+  align-items: center;
+}
+
+.containerStatusExplicacao {
+  display: flex;
+  column-gap: 10px;
+  font-size: 16px;
+  color: var(--color);
+  font-weight: bold;
+  flex-direction: column;
+}
+
+#containerDuvidasFuncionamento {
+  color: var(--color);
+}
+
+#containerDuvidasFuncionamento > a,
+#containerDuvidasFuncionamento > a:visited {
+  color: var(--color);
+}
+
+.statusPadroes {
+  width: 20px;
+  height: 20px;
+  border: solid 1px var(--border_color);
+  border-radius: 5px;
+}
+
+#finalizado {
+  background-color: hwb(120 56% 7%);
+}
+
+#quaseFinalizado {
+  background-color: rgb(247, 247, 110);
+}
+
+#expirado {
+  background-color: rgb(255, 115, 115);
+}
+
+#aberto {
+  background-color: rgb(141 168 239);
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  height: 800px;
+  overflow-y: scroll;
+  min-width: 325px;
+  max-width: 1200px;
+  width: 85%;
+  margin: 50px auto 0px auto;
+  list-style-type: none;
+}
+
+@media screen and (max-width: 800px) {
+  #containerMensagem {
+    width: 225px;
+    left: 80px !important;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  #topMain {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    column-gap: 10px;
+  }
+
+  #topMain > h1 {
+    font-size: 25px;
+  }
+
+  .statusPadroes {
+    width: 15px;
+    height: 15px;
+  }
+
+  .linhasStatus > label {
+    font-size: 15px;
+  }
+
+  .BotoesLista {
+    width: 65%;
+    margin-top: 0;
+  }
+
+  ul {
+    margin-top: 55px;
+  }
+}

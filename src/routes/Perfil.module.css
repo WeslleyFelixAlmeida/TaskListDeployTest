@@ -1,0 +1,65 @@
+:root {
+  --color: #0455bf;
+  --border_color: #034aa6;
+}
+
+#linkInicio {
+  align-self: flex-start;
+  color: var(--color);
+}
+
+#perfilContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  height: 800px;
+  padding-left: 15px;
+}
+
+#perfilContainer > h1{
+  color: var(--color);
+  font-size: 40px;
+}
+
+
+#perfilContainer > p{
+  color: var(--color);
+  font-size: 30px;
+}
+
+#perfilContainer > p > span{
+  margin-left: 10px;
+}
+
+.buttons{
+  padding: 10px;
+  width: 240px;
+  border-radius: 5px;
+  border: solid 1px var(--border_color);
+  color: white;
+  background-color: var(--color);
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.buttons:hover{
+  background-color: var(--border_color);
+  color: white;
+}
+
+#botaoDeletarConta{
+  width: 260px;
+  padding: 10px;
+  border-radius: 5px;
+  border: solid 1px red;
+  background-color: #f5b5b5;
+  color: red;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+#botaoDeletarConta:hover{
+  background-color: #f57e7e;
+}

@@ -1,0 +1,121 @@
+section {
+  min-height: 600px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+section > h1 {
+  color: var(--color);
+  font-size: 30px;
+  text-align: center;
+  text-shadow: var(--border_color) 0px 1px 0.5px;
+}
+
+section > p {
+  font-size: 30px;
+  color: var(--color);
+  text-align: center;
+  width: 370px;
+}
+
+section > form {
+  width: 350px;
+  height: 420px;
+  border: solid 2px var(--border_color);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  border-radius: 10px;
+  align-items: center;
+  margin-top: 50px;
+}
+
+section > form > h2{
+  color: var(--color);
+  font-size: 30px;
+  text-align: center;
+  text-shadow: 0px 0px 1px var(--border-color);
+}
+
+
+form > label {
+  color: var(--color);
+  font-size: 23px;
+  align-self: flex-start;
+  margin-left: 40px;
+}
+
+form > input[type="text"],
+form > input[type="password"] {
+  padding: 10px;
+  width: 250px;
+  border-radius: 5px;
+  border: solid var(--border_color) 1px;
+  color: var(--color);
+}
+
+form > input[type="text"]::placeholder,
+form > input[type="password"]::placeholder {
+  color: var(--color);
+  opacity: 60%;
+}
+
+form > input[type="text"]:focus,
+form > input[type="password"]:focus {
+  outline: var(--border_color);
+  color: var(--color);
+}
+
+form > input[type="submit"] {
+  width: 150px;
+  padding: 5px;
+  border-radius: 5px;
+  border: solid var(--border_color) 1px;
+  background-color: #0455bf;
+  color: white;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+form > input[type="submit"]:hover {
+  background-color: #1d65c4;
+}
+
+form > a {
+  color: var(--color);
+  opacity: 70%;
+  text-decoration: none;
+}
+
+form > a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 405px){
+    section > h1 {
+        font-size: 30px;
+        width: 240px;
+    }
+
+    section > p {
+        font-size: 20px;
+        width: 280px;
+    }
+
+    section > form {
+        width: 250px;
+        height: 300px;
+    }
+
+    form > input[type="text"], form > input[type="password"] {
+        width: 170px;
+    }
+
+    form > label {
+        margin-left: 30px;
+    }
+}

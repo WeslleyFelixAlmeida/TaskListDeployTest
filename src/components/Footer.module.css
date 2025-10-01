@@ -1,0 +1,21 @@
+footer {
+  background-image: url("../assets/imgs/Fundo/fundo_header_footer.jpg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+footer > p {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media screen and (min-height: 800px) {
+  footer {
+    position: absolute;
+    width: 100%;
+    margin-top: 100%;
+  }
+}

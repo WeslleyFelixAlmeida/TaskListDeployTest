@@ -1,0 +1,93 @@
+.fundoFiltro {
+  background-color: white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  justify-content: center;
+  color: var(--color);
+  display: none;
+}
+
+#containerFiltro {
+  display: flex;
+  flex-direction: column;
+  border: solid 1px var(--border_color);
+  padding: 10px;
+  border-radius: 10px;
+  width: 90%;
+  height: fit-content;
+  row-gap: 10px;
+}
+
+#containerButtons {
+  display: flex;
+  column-gap: 15px;
+}
+
+#containerButtons > input[type="button"],
+#containerButtons > input[type="submit"] {
+  width: 300px;
+  padding: 5px;
+  background-color: var(--color);
+  align-self: flex-start;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border: solid 1px var(--border_color);
+  border-radius: 5px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+#containerButtons > input[type="button"]:hover,
+#containerButtons > input[type="submit"]:hover {
+  background-color: var(--border_color);
+  color: white;
+}
+
+#filtroOpcoesData {
+  display: flex;
+  column-gap: 10px;
+  visibility: hidden;
+}
+
+#containerStatusFiltro {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+#containerStatusFiltro > h2 {
+  margin-bottom: 10px;
+}
+
+.containerLinhaInputs {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+#containerOpcoesFiltro label {
+  color: var(--color);
+  font-size: 23px;
+}
+
+#filtroOpcoesData input[type="date"] {
+  padding: 10px;
+  width: 130px;
+  border-radius: 5px;
+  border: solid var(--border_color) 1px;
+  color: var(--color);
+}
+
+.containerOpcaoData {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}
+
+#containerDataFiltro > h2 {
+  margin: 10px 0px;
+}

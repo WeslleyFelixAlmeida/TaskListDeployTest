@@ -1,0 +1,10 @@
+#containerMensagem{
+    display: none;
+    position: absolute;
+    text-align: center;
+    border: 2px solid;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-weight: bold;
+}

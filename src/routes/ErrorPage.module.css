@@ -1,0 +1,54 @@
+:root {
+  --color: #0455bf;
+  --border_color: #034aa6;
+}
+
+.icon_container {
+  display: flex;
+  align-items: center;
+}
+
+.icon_container::after {
+  content: "TaskList";
+  color: var(--border_color);
+  font-family: "Jaro";
+  font-size: 25px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#ErroPageDiv {
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+#ErroPageDiv > a {
+  margin-left: 10px;
+  color: #034aa6;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+#ErroPageDiv > a:hover {
+  text-decoration: underline;
+}
+
+#ErroPageDiv > p {
+  margin-left: 10px;
+  color: #0455bf;
+  text-shadow: 0px 1px 1px #034aa6;
+  font-size: 50px;
+  align-self: center;
+}
+
+#logo {
+  width: 65px;
+}

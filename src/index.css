@@ -1,0 +1,24 @@
+@font-face {
+  font-family: Jaro;
+  src: url("./assets/fonts/Jaro-Regular-VariableFont_opsz.ttf");
+}
+
+@font-face {
+  font-family: Inter;
+  src: url("./assets/fonts/Inter-VariableFont_opszwght.ttf");
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Inter";
+}
+
+main{
+  padding: 10px;
+}
+
+:root {
+  --color: #0455bf;
+  --border_color: #034aa6;
+}

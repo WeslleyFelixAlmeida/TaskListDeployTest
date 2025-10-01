@@ -1,0 +1,114 @@
+:root {
+  --color: #0455bf;
+  --border_color: #034aa6;
+}
+
+#linkInicio {
+  align-self: flex-start;
+  color: var(--color);
+}
+
+#criarTarefaContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  height: 800px;
+  padding-left: 15px;
+}
+
+#criarTarefaContainer > h1 {
+  color: var(--color);
+  font-size: 40px;
+  text-shadow: 1px 0px 1px #034aa6;
+}
+
+#taskForm {
+  border: solid 1px var(--border_color);
+  border-radius: 10px;
+  padding: 10px;
+  width: 50%;
+  max-width: 750px;
+  min-width: 600px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+#taskForm > label{
+  margin: 0;
+}
+
+#taskForm > input[type=text]{
+  width: 90%;
+}
+
+#taskForm > textarea{
+  border: solid 1px var(--border_color);
+  border-radius: 10px;
+  padding: 10px;
+  width: 90%;
+  height: 100px;
+  color: var(--color);
+  outline-color: var(--border_color);
+}
+
+#taskForm > textarea:focus{
+  outline-color: var(--border_color);
+}
+
+#taskForm> p{
+  color: var(--color);
+}
+
+#containerDatas{
+  display: flex;
+  padding-left: 10px;
+  column-gap: 10px;
+}
+
+#containerDatas > #containerDataInicio > input[type=date],
+#containerDatas > #containerDataFim > input[type=date]{
+  padding: 5px;
+  border: solid 1px var(--border_color);
+  border-radius: 5px;
+  color: var(--color);
+}
+
+#containerDatas > #containerDataInicio > input[type=date]:focus,
+#containerDatas > #containerDataFim > input[type=date]:focus{
+  outline: var(--border_color);
+}
+
+#containerDataInicio, #containerDataFim{
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  align-items: center;
+  color: var(--color);
+}
+
+.buttons {
+  padding: 10px;
+  width: 240px;
+  border-radius: 5px;
+  border: solid 1px var(--border_color);
+  color: white;
+  background-color: var(--color);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.descricaoArea::placeholder{
+  color: var(--color);
+  opacity: 60%;
+}
+
+
+@media screen and (max-width: 665px){
+  #taskForm {
+    width: 90%;
+    max-width: auto;
+    min-width: auto;
+  }
+}

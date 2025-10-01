@@ -1,0 +1,202 @@
+:root {
+  --color: #0455bf;
+  --border_color: #034aa6;
+}
+
+#linkInicio {
+  align-self: flex-start;
+  color: var(--color);
+}
+
+#datasContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  color: var(--color);
+  font-size: 20px;
+}
+
+#datasContainer > p {
+  border: solid 2px;
+  padding: 4px;
+  width: 315px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+#tarefasDetalhesContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  min-height: 800px;
+}
+
+#tarefasDetalhesContainer > h1 {
+  color: var(--color);
+  font-size: 40px;
+  text-shadow: 0px 0px 1px var(--border_color);
+  text-wrap: wrap;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+#tarefasDetalhesContainer > h2 {
+  color: var(--color);
+}
+
+#listaStatus {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.linhasStatus {
+  width: fit-content;
+  display: flex;
+  flex-direction: row-reverse;
+  column-gap: 10px;
+  color: #0455bf;
+  align-items: center;
+}
+
+.linhasStatus > p {
+  font-weight: bold;
+}
+
+.statusTarefa {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  border: solid 1px var(--border_color);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#statusAlterarCoitainer {
+  display: none;
+  flex-direction: column;
+  row-gap: 10px;
+  border: solid 2px;
+  padding: 10px;
+  border-radius: 10px;
+  position: absolute;
+  background: white;
+  left: 10px;
+  width: 310px;
+}
+
+.alterarStatusTarefa {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  border: solid 1px var(--border_color);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emAberto {
+  background-color: lightblue;
+}
+
+.finalizado {
+  background-color: lightgreen;
+}
+
+.expirado {
+  background-color: rgb(235, 110, 110);
+}
+
+.expiracaoProximo {
+  background-color: yellow;
+}
+
+.linhaAlterarStatus {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  background-color: white;
+  border: solid 1px blue;
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.5s background-color;
+}
+
+.linhaAlterarStatus:hover {
+  background-color: rgb(236, 236, 236);
+}
+
+#botoesStatusAlterar {
+  display: flex;
+  column-gap: 10px;
+}
+
+#editarTArefaButton {
+  width: 70px;
+  text-wrap: wrap;
+}
+
+.statusPadroes {
+  width: 20px;
+  height: 20px;
+  border: solid 1px var(--border_color);
+  border-radius: 5px;
+}
+
+#botoesContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.Botoes {
+  padding: 10px;
+  width: 160px;
+  border-radius: 5px;
+  border: solid 1px var(--border_color);
+  background-color: var(--color);
+  color: white;
+  cursor: pointer;
+}
+
+#deletarTarefaButton {
+  width: 160px;
+  padding: 10px;
+  border-radius: 5px;
+  border: solid 1px red;
+  background-color: #f5b5b5;
+  color: red;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#descricaoTarefa {
+  width: 700px;
+  height: fit-content;
+  border: solid 1px var(--color);
+  padding: 20px;
+  min-height: 400px;
+  color: var(--color);
+  text-align: justify;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  #descricaoTarefa {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  #tarefasDetalhesContainer > h1 {
+    font-size: 25px;
+  }
+
+  #containerMensagem {
+    width: 225px;
+    left: 85px !important;
+  }
+}

@@ -1,0 +1,117 @@
+:root {
+  --color: #0455bf;
+  --border_color: #034aa6;
+}
+
+nav {
+  background-image: url("../assets/imgs/Fundo/fundo_header_footer.jpg");
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0px 10px;
+}
+
+.icon_container {
+  width: 100px;
+}
+
+#logo {
+  width: 65px;
+}
+
+.icon_container {
+  display: flex;
+  align-items: center;
+}
+
+.icon_container::after {
+  content: "TaskList";
+  color: white;
+  font-family: "Jaro";
+  font-size: 25px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#linkVoltarLogo {
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+#iconePerfilContainer {
+  height: fit-content;
+  margin-top: 0px;
+  width: 65px;
+  background-color: transparent;
+  margin-right: 50px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  border: solid 1px var(--border_color);
+  border-radius: 10px;
+  padding: 10px;
+  row-gap: 20px;
+  transition: width 0.5s;
+  z-index: 5;
+}
+
+#perfilImgContainer {
+  border-radius: 50%;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1px 0px 0px 2px;
+  border: solid 1px var(--border_color);
+  box-shadow: 0px 1px 1px #575757;
+  cursor: pointer;
+}
+
+#perfilLinksInternos {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+  width: 100%;
+}
+
+#perfilLinksInternos > a,
+#perfilLinksInternos > input[type="button"] {
+  border: solid 1px var(--border_color);
+  padding: 5px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--color);
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+#perfilLinksInternos > a:hover,
+#perfilLinksInternos > input[type="button"]:hover{
+  background-color: var(--color);
+  color: white;
+}
+
+#perfilLinksInternos > input[type="button"] {
+  font-size: 16px;
+  width: 112%;
+  background-color: white;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 525px) {
+  #iconePerfilContainer {
+    margin-right: 0px;
+  }
+}

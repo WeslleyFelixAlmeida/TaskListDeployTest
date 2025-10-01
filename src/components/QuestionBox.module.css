@@ -1,0 +1,50 @@
+#containerQuestionBox {
+  height: 100vh;
+  width: 95%;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.603);
+  min-height: 755px;
+  justify-content: center;
+  z-index: 2;
+  display: none;
+}
+
+#containerMessage {
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border_color);
+  border-radius: 10px;
+  row-gap: 50px;
+  background-color: white;
+}
+
+#containerMessage > p {
+    font-size: 20px;
+    font-weight: bold;
+    width: 300px;
+    text-align: center;
+    color: var(--color);
+}
+
+#containerMessage > div {
+  display: flex;
+  column-gap: 20px;
+}
+
+#containerMessage > div > input[type="button"] {
+  width: 100px;
+  padding: 5px;
+  border-radius: 5px;
+  border: solid var(--border_color) 1px;
+  background-color: #0455bf;
+  color: white;
+  transition: 0.5s;
+  cursor: pointer;
+  margin-left: auto;
+  height: 38px;
+}
