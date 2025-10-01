@@ -71,7 +71,7 @@ export default function FormUpdate({
         
         setInformacao((infos) => ({
           ...infos,
-          datafimtarefaformatada: data.dataFimNova,
+          dataFimTarefaFormatada: data.dataFimNova,
         }));
         message("Data final alterada com sucesso!",  "success");
       })
