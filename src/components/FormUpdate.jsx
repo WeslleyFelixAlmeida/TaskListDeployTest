@@ -73,6 +73,8 @@ export default function FormUpdate({
           ...infos,
           dataFimTarefaFormatada: data.dataFimNova,
         }));
+
+        console.log(data.dataFimNova);
         message("Data final alterada com sucesso!",  "success");
       })
       .catch((err) => {
